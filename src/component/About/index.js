@@ -21,7 +21,7 @@ function About() {
     <div >
         <h1>Aryan Raj</h1>
         <h3>{data?.title}</h3>
-        <img src ={logo} alt='logo' />
+        <img src ={logo} alt='logo' width='100px' height='100px'/>
         {nameArray && nameArray.map((data)=>{
             return(
                 <div>
