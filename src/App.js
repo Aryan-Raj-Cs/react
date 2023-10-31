@@ -1,28 +1,25 @@
-import { useState } from 'react'
+import React,{ useState,useEffect,Children } from 'react'
 import './App.css';
 import About from "./component/About"
+import ClassAndFunctional from "./component/ClassAndFunctional"
+import Closure from './component/Closure';
 
-function App() {
-  const [value, setValue] = useState('mest')
-  const inputChange = (value) => {
-    setValue(value)
-  }
-  const submit = () => {
-    //  setValue(value)
-    console.log("submit")
-    setValue(value)
-  }
-  const submit2 = () => {
-    //  setValue(value)
-    console.log("submit")
-    setValue(value)
-  }
+function App({children}) {
+  const [count, setCount] = useState(0);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     // setCount(count + 1);
+  //     setCount((prevCount) => prevCount + 1);
+  //     console.log("inner", count);
+  //   }, 1000);
+
+  //   return () => clearInterval(interval);
+  // }, []);
   return (
     <div className="App">
+      <ClassAndFunctional/>
       <About />
-      <input onChange={(e) => { inputChange(e.target.value) }} />
-      <button onClick={() => { submit() }}>Submit</button>
-      <button onClick={submit2}>Submit without wrapper</button>
+      <Closure/>
     </div>
   );
 }

@@ -24,13 +24,11 @@ function About() {
         <img src ={logo} alt='logo' width='100px' height='100px'/>
         {nameArray && nameArray.map((data)=>{
             return(
-                <div>
+                <div key={data}>
                     {data}
                     </div>
             )
         })}
-
-   
     </div>
   );
 }
