@@ -42,6 +42,7 @@ class ClassComponent extends React.Component {
   
     return (
       <div>
+        <h2>To prove that class components re-render existing instances while functional components re-render new instances</h2>
         <button onClick={() => setRenderCount(renderCount + 1)}>Re-render</button>
   
         <ClassComponent />
