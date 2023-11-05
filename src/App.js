@@ -3,6 +3,7 @@ import './App.css';
 import About from "./component/About"
 import ClassAndFunctional from "./component/ClassAndFunctional"
 import Closure from './component/Closure';
+import Intersection from './component/IntersectionObserver/Intersection';
 
 function App({children}) {
   const [count, setCount] = useState(0);
@@ -17,9 +18,10 @@ function App({children}) {
   // }, []);
   return (
     <div className="App">
-      <ClassAndFunctional/>
+      {/* <ClassAndFunctional/>
       <About />
-      <Closure/>
+      <Closure/> */}
+      <Intersection/>
     </div>
   );
 }
