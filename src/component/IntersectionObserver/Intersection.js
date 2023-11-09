@@ -6,13 +6,7 @@ const Intersection = () => {
   const itemCount = 10;
 
   const loadMoreItems = () => {
-    // Simulate loading more items
     console.log("calling")
-    // setItems((prevItems) => {
-    //   return prevItems.concat(
-    //     Array.from({ length: itemCount }, (_, index) => `Item ${prevItems.length + index + 1}`)
-    //   );
-    // });
     setTimeout(() => {
         setItems((prevItems) => {
             return prevItems.concat(

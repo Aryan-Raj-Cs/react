@@ -4,6 +4,7 @@ import About from "./component/About"
 import ClassAndFunctional from "./component/ClassAndFunctional"
 import Closure from './component/Closure';
 import Intersection from './component/IntersectionObserver/Intersection';
+import Error from "./component/Error"
 
 function App({children}) {
   const [count, setCount] = useState(0);
@@ -21,7 +22,8 @@ function App({children}) {
       {/* <ClassAndFunctional/>
       <About />
       <Closure/> */}
-      <Intersection/>
+      <Error/>
+      {/* <Intersection/> */}
     </div>
   );
 }

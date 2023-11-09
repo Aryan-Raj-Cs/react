@@ -4,13 +4,16 @@ import ReactDOMServer from 'react-dom/server';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ErrorBoundery from "../src/component/ErrorBoundery"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const html = ReactDOMServer.renderToString(<App/>)
 console.log("render to string",html)
 root.render(
   <React.StrictMode>
+    <ErrorBoundery>
     <App />
+    </ErrorBoundery>
   </React.StrictMode>
 );
 
