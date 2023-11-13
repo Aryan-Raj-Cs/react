@@ -36,7 +36,7 @@ let obj = {}
     <div >
         <h1>Check Error for Error Boundries</h1>
         <h3>{data?.title}</h3>
-        <div>{obj.data.data}</div>
+        {/* <div>{obj.data.data}</div> */}
         <div>Click event error are not trace by Error Bounderies</div>
         <button onClick={checkError}> Error on Click Event</button>
     </div>

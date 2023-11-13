@@ -5,6 +5,7 @@ import ClassAndFunctional from "./component/ClassAndFunctional"
 import Closure from './component/Closure';
 import Intersection from './component/IntersectionObserver/Intersection';
 import Error from "./component/Error"
+import CounterComponent from './component/CreateRefUseRef';
 
 function App({children}) {
   const [count, setCount] = useState(0);
@@ -17,13 +18,22 @@ function App({children}) {
 
   //   return () => clearInterval(interval);
   // }, []);
+  let obj = {"title":"aryan"}
+  let arr = [1,2,3]
+  const element = React.createElement("div", null, obj.title, arr.map(function (val) {
+    return React.createElement("h1", null, val);
+  }))
+  console.log("element",element)
   return (
     <div className="App">
       {/* <ClassAndFunctional/>
       <About />
       <Closure/> */}
-      <Error/>
       {/* <Intersection/> */}
+      <CounterComponent/>
+      {/* <Error/> */}
+
+      
     </div>
   );
 }
